@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCU Enrollment Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .buttons {
+      margin-top: 15px;
+    }
+    .buttons input {
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit {
+      background-color: #28a745;
+      color: white;
+    }
+    .reset {
+      background-color: #dc3545;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h2>PCU Enrollment Form</h2>
+  <form>
+    <!-- Five (5) Text Fields -->
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+
+    <label for="course">Preferred Course:</label>
+    <input type="text" id="course" name="course">
+
+    <!-- Three (3) Radio Buttons -->
+    <label>Year Level:</label>
+    <input type="radio" id="freshman" name="year" value="Freshman">
+    <label for="freshman">Freshman</label>
+    <input type="radio" id="sophomore" name="year" value="Sophomore">
+    <label for="sophomore">Sophomore</label>
+    <input type="radio" id="junior" name="year" value="Junior">
+    <label for="junior">Junior</label>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <input type="submit" value="Submit" class="submit">
+      <input type="reset" value="Reset" class="reset">
+    </div>
+  </form>
+</body>
+</html>

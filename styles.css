@@ -1,0 +1,57 @@
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --primary: #4F46E5;
+  --secondary: #10B981;
+}
+
+/* Base styling */
+body {
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  scroll-padding-top: 5rem; /* Prevent header overlap on scroll */
+}
+
+/* Fade In Animation */
+.animate-fadeIn { animation: fadeIn 0.6s ease both; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation link styling */
+.nav-link {
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+  color: var(--primary);
+}
+.dark .nav-link:hover {
+  color: var(--primary);
+}
+
+/* Theme toggle button */
+.theme-btn {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: #f3f4f6;
+  transition: all 0.3s ease;
+}
+.theme-btn:hover {
+  background-color: #e5e7eb;
+}
+.dark .theme-btn {
+  background-color: #111827;
+}
+.dark .theme-btn:hover {
+  background-color: #374151;
+}
+.theme-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary);
+}

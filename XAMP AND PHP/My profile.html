@@ -1,0 +1,138 @@
+<!-- Main HTML file (e.g., index.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #34495e;
+      position: relative;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      background-color: #2c3e50;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c3e50;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      top: 50px;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #1abc9c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px;
+      background: url('https://source.unsplash.com/1600x900/?nature,technology') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+      max-width: 600px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Profile</h1>
+  </header>
+
+  <nav>
+    <a href="Front page.html">Home</a>
+    <a href="About Me.html">About Me</a>
+
+    <div class="dropdown">
+      <a href="My profile.html">My Profile</a>
+      <div class="dropdown-content">
+        <a href="About Me.html">View</a>
+        <a href="Edit.html">Edit</a>
+      </div>
+    </div>
+
+    <a href="My College.html">My College</a>
+    <a href="Quiz.html">My Quiz</a>
+    <a href="Log in.html">Log In</a>
+  </nav>
+
+  <main>
+  </main>
+
+  <footer>
+    &copy; 2025 My Website. All rights reserved.
+  </footer>
+</body>
+</html>

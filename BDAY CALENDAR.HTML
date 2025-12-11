@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="BDAY CALENDAR DESIGN.css">
+    <style>
+        body {
+            background-image: url('https://64.media.tumblr.com/b9a9eced348b19efa6f8a2adbf094127/b8274c15e449e3b3-b6/s500x750/d1d8ad44478b2de75ebe507667e6986dadfce032.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .calendar-title-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        .calendar-title {
+            font-size: 100px;
+            color: white;
+            background: rgba(0,0,0,0.7);
+            padding: 30px 60px;
+            border-radius: 20px;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.7);
+            border: 3px solid #fff;
+            text-align: center;
+        }
+        table {
+            background: rgba(0,0,0,0.6);
+            margin: 30px auto;
+        }
+        th, td {
+            text-align: center;
+            height: 50px;
+            width: 100px;
+            background: #2525258f;
+        }
+        th span, td span {
+            color: white;
+        }
+        .img-bg-cell {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            padding: 0;
+            border: none;
+            background: #2525258f;
+        }
+        .img-bg-cell .img-bg {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            display: block;
+            border-radius: 50%;
+        }
+        .img-bg-cell .img-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: red;
+            font-size: 30px;
+            font-weight: bold;
+            pointer-events: none;
+        }
+        .sunday-num {
+            font-weight: bold;
+        }
+        .sunday-header, .saturday-header, .sunday-num, .sat-num {
+            color: red !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar-title-container">
+        <span class="calendar-title">My Birth Month</span>
+    </div>
+    <table border="5" bordercolor="saddlebrown">
+        <tr>
+            <th><span class="sunday-header" style="font-size: 30px;">Sunday</span></th>
+            <th><span style="font-size: 30px;">Monday</span></th>
+            <th><span style="font-size: 30px;">Tuesday</span></th>
+            <th><span style="font-size: 30px;">Wednesday</span></th>
+            <th><span style="font-size: 30px;">Thursday</span></th>
+            <th><span style="font-size: 30px;">Friday</span></th>
+            <th><span class="saturday-header" style="font-size: 30px;">Saturday</span></th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><span style="font-size: 24px;">1</span></td>
+            <td><span style="font-size: 24px;">2</span></td>
+            <td><span style="font-size: 24px;">3</span></td>
+            <td><span style="font-size: 24px;">4</span></td>
+            <td><span class="sat-num" style="font-size: 24px;">5</span></td>
+        </tr>
+        <tr>
+            <td><span class="sunday-num" style="font-size: 24px;">6</span></td>
+            <td><span style="font-size: 24px;">7</span></td>
+            <td><span style="font-size: 24px;">8</span></td>
+            <td><span style="font-size: 24px;">9</span></td>
+            <td><span style="font-size: 24px;">10</span></td>
+            <td><span style="font-size: 24px;">11</span></td>
+            <td><span class="sat-num" style="font-size: 24px;">12</span></td>
+        </tr>
+        <tr>
+            <td><span class="sunday-num" style="font-size: 24px;">13</span></td>
+            <td><span style="font-size: 24px;">14</span></td>
+            <td><span style="font-size: 24px;">15</span></td>
+            <td><span style="font-size: 24px;">16</span></td>
+            <td><span style="font-size: 24px;">17</span></td>
+            <td><span style="font-size: 24px;">18</span></td>
+            <td><span class="sat-num" style="font-size: 24px;">19</span></td>
+        </tr>
+        <tr>
+            <td><span class="sunday-num" style="font-size: 24px;">20</span></td>
+            <td><span style="font-size: 24px;">21</span></td>
+            <td><span style="font-size: 24px;">22</span></td>
+            <td><span style="font-size: 24px;">23</span></td>
+            <td><span style="font-size: 24px;">24</span></td>
+            <td><span style="font-size: 24px;">25</span></td>
+            <td class="img-bg-cell">
+                <div style="display: flex; align-items: center; justify-content: center; width: 100px; height: 100px; position: relative; margin: 0 auto;">
+                    <img class="img-bg" src="e:\94455093_3109768542421256_2000360402268979200_n.jpg" alt="me">
+                    <span class="img-text">26</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><span class="sunday-num" style="font-size: 24px;">27</span></td>
+            <td><span style="font-size: 24px;">28</span></td>
+            <td><span style="font-size: 24px;">29</span></td>
+            <td><span style="font-size: 24px;">30</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+<br>
+<br>
+<br>
+
+<Marquee><div style="width: 100%;
+margin: 20px auto 0 auto; 
+background: rgba(0,0,0,0.7); 
+border-radius: 20px; 
+padding: 20px 0; 
+box-shadow: 0 2px 16px rgba(0,0,0,0.5); 
+text-align: center;">
+
+<span style="color: #fff; font-size: 1.5em; letter-spacing: 2px;">
+        <b>[Day Of Valor</b> - April 9] 
+        <b>[Maundy Thursday</b> - April 17] 
+        <b>[Good Friday</b> - April 18] 
+        <b>[Black Saturday</b> - April 19] 
+        <b>[Easter Sunday</b> - April 20] 
+        <b>[My B-Day</b> - April 26]
+</span>
+</div>
+</Marquee>
+</body>
+</html>

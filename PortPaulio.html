@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeam Paul S. Oropesa - Creative Developer Portfolio</title>
+    <!-- Load Tailwind CSS from CDN for fast styling and responsiveness -->
+	<script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Added smooth background/text transition for dark mode toggle */
+            transition: background-color 0.3s, color 0.3s; 
+            scroll-padding-top: 5rem; /* For smooth scrolling offset */
+        }
+    </style>
+
+    <header class="fixed top-0 left-0 right-0 z-50 shadow-xl bg-white/95 dark:bg-dark-card/95 backdrop-blur-sm transition-colors duration-300">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <!-- Logo/Name -->
+            <a href="#" class="text-2xl font-extrabold text-primary hover:text-secondary transition-colors duration-300 tracking-wider">
+                Jeam Paul S. Oropesa
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#story" class="text-lg font-medium hover:text-primary dark:hover:text-primary transition-colors duration-300 p-2 rounded-lg">My Story</a>
+                <a href="#resume" class="text-lg font-medium hover:text-primary dark:hover:text-primary transition-colors duration-300 p-2 rounded-lg">Resume</a>
+                <a href="#achievements" class="text-lg font-medium hover:text-primary dark:hover:text-primary transition-colors duration-300 p-2 rounded-lg">Achievements</a>
+                <a href="#works" class="text-lg font-medium hover:text-primary dark:hover:text-primary transition-colors duration-300 p-2 rounded-lg">Works</a>
+            </div>
+
+            <!-- Dark Mode Toggle Button (Functionality & Interactivity) -->
+            <button onclick="toggleDarkMode()" class="p-2 rounded-full bg-gray-100 dark:bg-dark-bg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                <!-- Sun Icon for Light Mode (lucide-react icon equivalent as inline SVG) -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 sun-icon text-yellow-500 block dark:hidden">
+                    <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+                </svg>
+                <!-- Moon Icon for Dark Mode -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 moon-icon text-indigo-300 hidden dark:block">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                </svg>
+            </button>
+        </nav>
+  
+
+    </header>
+
+    <!-- 
+        ========================================================
+        MAIN CONTENT AREA
+        ======================================================== 
+    -->
+    <main class="pt-20">
+        
+        <!-- HERO SECTION (Visual Appeal) -->
+        <section id="hero" class="relative overflow-hidden pt-16 pb-24 sm:pt-24 sm:pb-32 bg-primary text-white dark:bg-gray-900 transition-colors duration-300">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-4 animate-fadeIn">
+                    Hello, I'm a <span class="text-secondary dark:text-primary">College Student</span>
+                </h1>
+                <p class="text-xl sm:text-2xl opacity-90 max-w-4xl mx-auto mb-8 animate-fadeIn delay-200">
+                    Transforming ideas into polished, high-performance digital experiences using modern web technologies.
+                </p>
+				<p class="text-Progress sm:text-2xl opacity-90 max-w-4xl mx-auto mb-8 animate-fadeIn delay-200">
+					Im still Progressing and Editing Website for future use
+				</p>
+                <a href="#works" class="mt-8 inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-semibold rounded-xl text-primary bg-white hover:bg-gray-100 dark:bg-gray-200 dark:text-gray-900 transition-all duration-500 shadow-2xl transform hover:scale-105 hover:shadow-primary/50">
+                    View My Work &rarr;
+                </a>
+            </div>
+            <!-- Simple background animation/effect -->
+            <div class="absolute inset-0 z-[-1] opacity-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-color-indigo-400),_var(--tw-color-indigo-800))] dark:bg-[radial-gradient(ellipse_at_top,_var(--tw-color-gray-700),_var(--tw-color-gray-900))]"></div>
+        </section>
+
+        <!-- 
+            ========================================================
+            SECTION 1: YOUR STORY (About Me)
+            ======================================================== 
+        -->
+        <section id="story" class="py-20 sm:py-28 container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-primary dark:text-primary border-b-2 border-primary/20 pb-4 max-w-fit mx-auto">My Story: The Journey</h2>
+            <div class="bg-white dark:bg-dark-card p-8 sm:p-12 rounded-3xl shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:shadow-primary/20">
+                <p class="text-lg leading-relaxed mb-6">
+                    I am currently a **3rd-year college student at Philippine Christian University**, focused on building a strong foundation in web and application development. My journey began with core languages like **Java**, and expanded into crafting user interfaces using **HTML** and **CSS**.
+                </p>
+                <p class="text-lg leading-relaxed mb-6">
+                    I am proficient in setting up development environments using **XAMPP**, and managing databases through **phpMyAdmin**, which allows me to work seamlessly on full-stack projects using PHP. I am driven by the process of bringing creative designs to life and ensuring applications are structured, functional, and visually appealing.
+                </p>
+                <p class="text-xl leading-relaxed text-secondary font-semibold border-l-4 border-secondary pl-4">
+                    My goal is to master these technologies to solve real-world problems and deliver compelling digital experiences.
+                </p>
+            </div>
+        </section>
+
+        <!-- 
+            ========================================================
+            SECTION 2: ONLINE RESUME (Skills & Education Summary)
+            ======================================================== 
+        -->
+        <section id="resume" class="py-20 sm:py-28 bg-gray-100 dark:bg-dark-bg transition-colors duration-300">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-primary dark:text-primary border-b-2 border-primary/20 pb-4 max-w-fit mx-auto">Online Resume Summary</h2>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- Skills -->
+                    <div class="bg-white dark:bg-dark-card p-8 rounded-3xl shadow-xl transition-all duration-300 hover:shadow-lg hover:shadow-secondary/20">
+                        <h3 class="text-2xl font-semibold mb-6 border-b pb-2 text-primary">Core Skills</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <!-- Skill Tags -->
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium">HTML & CSS</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium">JavaScript</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium">Java (OOP)</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium">PHP</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium">MySQL</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium">XAMPP</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium">Git/GitHub</span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2 text-primary">Soft Skills</h3>
+                        <ul class="space-y-2 text-lg">
+                            <li class="flex items-center"><span class="text-primary mr-3 text-2xl">•</span> Problem Solving</li>
+                            <li class="flex items-center"><span class="text-primary mr-3 text-2xl">•</span> Detail-Oriented</li>
+                            <li class="flex items-center"><span class="text-primary mr-3 text-2xl">•</span> Team Collaboration</li>
+                        </ul>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="bg-white dark:bg-dark-card p-8 rounded-3xl shadow-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+                        <h3 class="text-2xl font-semibold mb-6 border-b pb-2 text-primary">Educational History</h3>
+                        <div class="space-y-6">
+                            <!-- PCU -->
+                            <div class="border-l-4 border-secondary pl-4">
+                                <p class="text-xl font-bold">College (3rd Year)</p>
+                                <p class="text-primary font-medium">Philippine Christian University (PCU)</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">2022 - Present</p>
+                                <ul class="list-disc ml-5 mt-2 text-base space-y-1 text-gray-700 dark:text-gray-300">
+                                    <li>Focusing on core programming and web development concepts.</li>
+                                </ul>
+                            </div>
+                            <!-- CEU -->
+                            <div class="border-l-4 border-gray-300 pl-4">
+                                <p class="text-xl font-bold">Senior High School</p>
+                                <p class="text-primary font-medium">Centro Escolar University (CEU)</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Completion Year</p>
+                                <ul class="list-disc ml-5 mt-2 text-base space-y-1 text-gray-700 dark:text-gray-300">
+                                    <li>Completed preparatory coursework.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            ========================================================
+            SECTION 3: ACHIEVEMENTS
+            ======================================================== 
+        -->
+        <section id="achievements" class="py-20 sm:py-28 container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-primary dark:text-primary border-b-2 border-primary/20 pb-4 max-w-fit mx-auto">Achievements & Recognition</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Achievement 1: Web Dev Foundation -->
+                <div class="bg-white dark:bg-dark-card p-6 rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 border-t-8 border-primary group">
+                    <p class="text-4xl text-primary mb-3">💻</p>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-secondary">Web Development Foundation</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Certificate of Completion (PCU Course)</p>
+                    <p class="mt-3 text-sm">Successfully completed core coursework in HTML, CSS, and responsive web design, the bedrock of modern development.</p>
+                </div>
+
+                <!-- Achievement 2: Database Proficiency -->
+                <div class="bg-white dark:bg-dark-card p-6 rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 border-t-8 border-secondary group">
+                    <p class="text-4xl text-secondary mb-3">💾</p>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-primary">Database Management Proficiency</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Practical Skill Acquired (3rd Year)</p>
+                    <p class="mt-3 text-sm">Proficient in database design, querying, and management using MySQL via phpMyAdmin for dynamic web applications.</p>
+                </div>
+
+                <!-- Achievement 3: Java Basics -->
+                <div class="bg-white dark:bg-dark-card p-6 rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 border-t-8 border-primary group">
+                    <p class="text-4xl text-primary mb-3">☕</p>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-secondary">Java Programming Basics</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Coursework Completed (PCU)</p>
+                    <p class="mt-3 text-sm">Demonstrated competence in object-oriented programming (OOP) concepts and foundational algorithm design using Java.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            ========================================================
+            SECTION 4: WORKS (Projects Showcase)
+            ======================================================== 
+        -->
+        <section id="works" class="py-20 sm:py-28 bg-gray-100 dark:bg-dark-bg transition-colors duration-300">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-primary dark:text-primary border-b-2 border-primary/20 pb-4 max-w-fit mx-auto">Featured Works</h2>
+                <p class="text-center text-xl mb-12 max-w-2xl mx-auto">Showcasing projects I made</p>
+
+                <div class="grid md:grid-cols-2 gap-10">
+
+                    <!-- Project 1: Platform Technology: HTML/CSS/JS (Landing Page) -->
+                    <div class="bg-white dark:bg-dark-card rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="h-56 bg-gray-200 dark:bg-gray-700 flex items-center justify-center p-4">
+                            <!-- !!! REPLACE THIS IMAGE SOURCE WITH YOUR PROJECT SCREENSHOT !!! -->
+                            <img src="PROJECT 1 PIC.PNG" alt="Project 1 Screenshot" style="width: 620px; height: 200px; mt-6 mb-6 ml-4 mr-4" class="w-full h-full object-cover rounded-lg border border-primary/30" onerror="this.src='PROJECT 1 PIC'">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Birth Day Calendar Project</h3>
+                            <p class="text-sm font-medium text-secondary mb-3">Technology: HTML & CSS (Responsive Design)</p>
+                            <p class="text-gray-700 dark:text-gray-300">A clean, Calendar Project demonstrating mastery of responsive layouts.</p>
+                            <a href="file:///E:/portfolio/BDAY%20CALENDAR.HTML" class="mt-4 inline-block text-primary hover:text-secondary font-semibold transition-colors flex items-center">
+                                View Live Demo 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 w-4 h-4"><path d="M7 7h10v10"/><path d="M10 14L18 6"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Platform Technology: Java (Desktop Application) -->
+                    <div class="bg-white dark:bg-dark-card rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="h-56 bg-gray-200 dark:bg-gray-700 flex items-center justify-center p-4">
+                            <!-- !!! REPLACE THIS IMAGE SOURCE WITH YOUR PROJECT SCREENSHOT !!! -->
+                            <img src="PROJECT 2 PIC.JPG" alt="Project 2 Screenshot" style="width: 620px; height: 200px; mt-6 mb-6 ml-4 mr-4" class="w-full h-full object-cover rounded-lg border border-secondary/30" onerror="this.src='PROJECT 2 PIC.JPG">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Resume Project</h3>
+                            <p class="text-sm font-medium text-secondary mb-3">Technology: HTML & CSS (Responsive Design)</p>
+                            <p class="text-gray-700 dark:text-gray-300">A basic Resume webdesign built using HTML.</p>
+                            <a href="file:///E:/portfolio/Resume.HTML" class="mt-4 inline-block text-primary hover:text-secondary font-semibold transition-colors flex items-center">
+                                View Live Demo
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 w-4 h-4"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.4 5.4 0 0 0-1.5-3.75 5.07 5.07 0 0 0-.1-3.75s-1.25-.37-4.17 1.48a14.28 14.28 0 0 0-6 0c-2.92-1.85-4.17-1.48-4.17-1.48A5.07 5.07 0 0 0 5 4.87a5.4 5.4 0 0 0-1.5 3.75c0 5.4 3.3 6.65 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Platform Technology: PHP/MySQL (Web App) -->
+                    <div class="bg-white dark:bg-dark-card rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="h-56 bg-gray-200 dark:bg-gray-700 flex items-center justify-center p-4">
+                            <!-- !!! REPLACE THIS IMAGE SOURCE WITH YOUR PROJECT SCREENSHOT !!! -->
+                            <img src="PROJECT 3 PIC.PNG" alt="Project 3 Screenshot" style="width: 620px; height: 200px; mt-6 mb-6 ml-4 mr-4" class="w-full h-full object-cover rounded-lg border border-primary/30" onerror="this.src='PROJECT 3 PIC.PNG">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">XAMPP/PHP</h3>
+                            <p class="text-sm font-medium text-secondary mb-3">Technology: PHP, XAMPP, and phpMyAdmin</p>
+                            <p class="text-gray-700 dark:text-gray-300">A simple template for Enronllment Page for Enrollment in PCU.</p>
+                            <a href="file:///E:/portfolio/XAMP%20and%20PHP/PCU%20Enrollment.HTML" class="mt-4 inline-block text-primary hover:text-secondary font-semibold transition-colors flex items-center">
+                                View Live Demo
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 w-4 h-4"><path d="M16 18l4-4-4-4"/><path d="M8 6l-4 4 4 4"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Platform Technology: JavaScript (Interactive) -->
+                    <div class="bg-white dark:bg-dark-card rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="h-56 bg-gray-200 dark:bg-gray-700 flex items-center justify-center p-4">
+                            <!-- !!! REPLACE THIS IMAGE SOURCE WITH YOUR PROJECT SCREENSHOT !!! -->
+                            <img src="PROJECT 4 PIC.PNG" alt="Project 4 Screenshot" style="width: 620px; height: 200px; mt-6 mb-6 ml-4 mr-4" class="w-full h-full object-cover rounded-lg border border-secondary/30" onerror="this.src='PROJECT 4 PIC.PNG">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Using XAMP AND PHP using for about Me,school and a small quiz</h3>
+                            <p class="text-sm font-medium text-secondary mb-3">XAMPP/PHP</p>
+                            <p class="text-gray-700 dark:text-gray-300">A Sample of using XAMP and PHP to test student learning and capabilites</p>
+                            <a href="file:///E:/portfolio/XAMP%20and%20PHP/Front%20page.html" class="mt-4 inline-block text-primary hover:text-secondary font-semibold transition-colors flex items-center">
+                                View Live Demo 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 w-4 h-4"><path d="M7 7h10v10"/><path d="M10 14L18 6"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 
+        ========================================================
+        FOOTER (Contact & Copyright)
+        ======================================================== 
+    -->
+    <footer class="bg-gray-800 dark:bg-black text-white py-12 transition-colors duration-300">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-extrabold mb-4 text-secondary">Let's Build Something Great.</h3>
+            <p class="mb-6 text-lg">You can reach me at: <a href="mailto:jeampauloropesa@gmail.com" class="text-primary hover:text-secondary underline font-medium transition-colors">jeampauloropesa@gmail.com</a></p>
+            
+            <div class="flex justify-center space-x-8 mb-8">
+                <!-- Social Icons (Placeholder links) -->
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors text-xl" title="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors text-xl" title="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3-1 6-3 6-8a4.5 4.5 0 0 0-1.2-3.2 4.2 4.2 0 0 0-.2-3.6s-1.1-.3-3.7 1.4a16.8 16.8 0 0 0-8 0c-2.6-1.7-3.7-1.4-3.7-1.4A4.2 4.2 0 0 0 3 6.3a4.5 4.5 0 0 0-1.2 3.2c0 5 3 7 6 8a4.8 4.8 0 0 0-1 3.5v4"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors text-xl" title="Twitter/X">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2.1"/><path d="M18 10c-3.2 0-5.8-2.6-5.8-5.8s2.6-5.8 5.8-5.8 5.8 2.6 5.8 5.8c0 .8-.1 1.6-.4 2.3"/></svg>
+                </a>
+            </div>
+            <p class="mt-8 text-sm text-gray-400">&copy; 2024 Jeam Paul S. Oropesa. All Rights Reserved. Built with HTML, Tailwind CSS, & JavaScript.</p>
+        </div>
+    </footer>
+</body>
+</html>

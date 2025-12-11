@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .edit-form {
+      background-color: #2c3e50;
+      color: white;
+      padding: 40px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .edit-form h2 {
+      margin-top: 0;
+    }
+
+    .edit-form label {
+      display: block;
+      margin-top: 15px;
+      text-align: left;
+    }
+
+    .edit-form input[type="text"],
+    .edit-form input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .edit-form input[type="submit"],
+    .edit-form button {
+      background-color: #1abc9c;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      margin-top: 20px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .edit-form input[type="submit"]:hover,
+    .edit-form button:hover {
+      background-color: #16a085;
+    }
+  </style>
+</head>
+<body>
+  <form class="edit-form" onsubmit="saveChanges(); return false;">
+    <h2>Edit Profile</h2>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" placeholder="Enter new email">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter new password">
+
+    <input type="submit" value="Save Changes">
+
+    <!-- Back Button -->
+    <button type="button" onclick="history.back()">Back</button>
+  </form>
+
+  <script>
+    // Load saved data when the page loads
+    window.onload = function () {
+      const savedEmail = localStorage.getItem("userEmail");
+      const savedPassword = localStorage.getItem("userPassword");
+
+      if (savedEmail) document.getElementById("email").value = savedEmail;
+      if (savedPassword) document.getElementById("password").value = savedPassword;
+    };
+
+    // Save data to localStorage
+    function saveChanges() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      localStorage.setItem("userEmail", email);
+      localStorage.setItem("userPassword", password);
+
+      alert("Changes saved locally!");
+    }
+  </script>
+</body>
+</html>
